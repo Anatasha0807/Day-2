@@ -20,19 +20,27 @@ choice = gets.to_i
 
 if choice == 1
   secret_number = easy_secret
+  chances = 6
 elsif choice == 2
   secret_number = medium_secret
-else choice == 3
+  chances = 4
+elsif choice == 3
   secret_number = hard_secret
+  chances = 2
+else
+  exit
 end
 
 puts "Pick any number from 1 to 100?"
+puts "Secret: #{secret_number}"
 guess = gets.chomp.to_i
 
 count = 1
 previous_tries = []
 
-while count < 6
+
+
+while count < chances
   if secret_number == guess
     puts "You Win"
     break
