@@ -45,6 +45,9 @@ while count < chances
     puts "You Are Awesome!"
     history[name] = chances - 1
 
+    puts "Leaderboard"
+    puts "==========="
+
     puts history
     break
   else
