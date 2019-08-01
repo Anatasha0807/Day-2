@@ -13,27 +13,32 @@ hard_secret = rand(1..100)
 
 history = {}
 
-puts "Please choose your level difficulty?"
+puts "Please Choose Your Level Difficulty?"
 puts "1 - Easy"
 puts "2 - Medium"
 puts "3 - Hard"
 
 choice = gets.to_i
 
+puts "You Choose Level #{choice}"
+
 if choice == 1
   secret_number = easy_secret
+  maximum_number = 10
   chances = 6
 elsif choice == 2
   secret_number = medium_secret
+  maximum_number = 50
   chances = 4
 elsif choice == 3
   secret_number = hard_secret
+  maximum_number = 100
   chances = 2
 else
   exit
 end
 
-puts "Pick any number from 1 to 100?"
+puts "Pick any number from 1 to #{maximum_number}?"
 puts "Secret: #{secret_number}"
 guess = gets.chomp.to_i
 
@@ -49,6 +54,12 @@ while count < chances
     puts "==========="
 
     puts history
+
+
+      puts "Do You Want To Play Again?"
+      puts "Y - Yes and Play Again"
+      puts "N - No and Exit"
+
     break
   else
     puts "Try Again"
