@@ -38,8 +38,6 @@ guess = gets.chomp.to_i
 count = 1
 previous_tries = []
 
-
-
 while count < chances
   if secret_number == guess
     puts "You Win"
@@ -54,7 +52,7 @@ while count < chances
 
   if secret_number != guess
     puts "You Lose"
-    if count == 6
+    if count == chances
       puts "Game Over"
       puts "the correct answer: #{secret_number}"
       exit
