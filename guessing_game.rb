@@ -11,6 +11,8 @@ easy_secret = rand(1..10)
 medium_secret = rand(1..50)
 hard_secret = rand(1..100)
 
+history = {}
+
 puts "Please choose your level difficulty?"
 puts "1 - Easy"
 puts "2 - Medium"
@@ -40,7 +42,10 @@ previous_tries = []
 
 while count < chances
   if secret_number == guess
-    puts "You Win"
+    puts "You Are Awesome!"
+    history[name] = chances - 1
+
+    puts history
     break
   else
     puts "Try Again"
