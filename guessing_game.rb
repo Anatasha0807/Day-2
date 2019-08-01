@@ -49,7 +49,8 @@ def set_default_values
 end
 
 def game_begins
-  puts "Pick any number from 1 to #{@maximum_number}?"
+  puts "secret_number: #{@secret_number}"
+  puts "Pick Any Number From 1 To #{@maximum_number}?"
   guess = gets.chomp.to_i
 
   count = 1
@@ -79,8 +80,9 @@ def game_begins
    if @secret_number != guess
      puts "You Lose"
      if count == @chances
-       puts "Game Over"
-       puts "the correct answer: #{@secret_number}"
+       puts "Boo! Game Over!"
+       puts "The Correct Answer: #{@secret_number}"
+       prompt_play
        exit
      end
    end
