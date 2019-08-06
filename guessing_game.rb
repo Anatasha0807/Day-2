@@ -11,7 +11,7 @@ $stdout.sync = true
 @history = {}
 @previous_tries = []
 
-puts "Welcome to Guessing Game"
+puts "Welcome to Guessing Game!"
 
 def ask_for_name
   puts "What's your name?"
@@ -50,6 +50,7 @@ end
 
 def game_begins
   puts "secret_number: #{@secret_number}"
+  puts "You Have #{@chances} Chances To Win This Game"
   puts "Pick Any Number From 1 To #{@maximum_number}?"
   guess = gets.chomp.to_i
 
@@ -78,9 +79,8 @@ def game_begins
    end
 
    if @secret_number != guess
-     puts "You Lose"
+     puts "You Lose. Game Over"
      if count == @chances
-       puts "Boo! Game Over!"
        puts "The Correct Answer: #{@secret_number}"
        prompt_play
        exit
