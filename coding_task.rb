@@ -1,12 +1,12 @@
 old_sync = $stdout.sync
 $stdout.sync = true
 
-date = [91, 89, 213, 1, 4]
+#date = [91, 89, 213, 1, 4]
 
-date[]
+#date[]
 
 def array(date)
-  puts date.sort
+  date.sort
 end
 #array(date)
 
@@ -14,16 +14,18 @@ end
 #hash = [{name: 'Bella', age: 8}, {name: 'Iry', age: 8}, {name:'Ayden', age: 7}]
 
 def name_age(details)
+  sentence = []
   details.each do |obj|
-    puts "My name is #{obj[:name]}. I am #{obj[:age]} years old."
+    sentence << "My name is #{obj[:name]}. I am #{obj[:age]} years old."
   end
+  sentence
 end
 
-players = [{ name: 'Zlatan', brand: 'Nike'}, { name: 'Walcott', brand: 'ADIDAS'},
-           { name: 'Roberts', brand: 'nike'}, { name: 'Hamilton', brand: 'puma'},
-           { name: 'Rossi', brand: 'adidas'}, { name: 'Muller', brand: 'nike'},
-           { name: 'Schwans', brand: 'PUMA'}, { name: 'Miller', brand: 'UMBRO'}
-           
+# players = [{ name: 'Zlatan', brand: 'Nike'}, { name: 'Walcott', brand: 'ADIDAS'},
+#            { name: 'Roberts', brand: 'nike'}, { name: 'Hamilton', brand: 'puma'},
+#            { name: 'Rossi', brand: 'adidas'}, { name: 'Muller', brand: 'nike'},
+#            { name: 'Schwans', brand: 'PUMA'}, { name: 'Miller', brand: 'UMBRO'}
+
 
 def fb(players)
   adidas = []
